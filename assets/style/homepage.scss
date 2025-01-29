@@ -1,18 +1,12 @@
 @use 'general.scss';
 
-* {
-  font-family: Roboto;
-}
-
-a {
-  text-decoration: none;
-}
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 113px;
+  position: relative;
 
   &__container {
     &__location {
@@ -24,20 +18,30 @@ a {
       height: 50px;
       font-weight: 500;
       font-size: 16px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+      img {
+        position: absolute;
+        left: 28.8%;
+      }
     }
 
     &__logo {
       display: flex;
+      justify-content: center;
       height: 63px;
+      width: 100vw;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
   }
 }
 
-.section__explore, .section__restaurants {
+.explore, .restaurants {
   background-color: var(--light-grey);
 }
 
-.section__explore {
+.explore {
   width: 100vw; // Pourquoi à gauche il y a encore une marge ?
   display: flex;
   flex-direction: column;
@@ -69,12 +73,39 @@ a {
 }
 
 
-.section__functioning {
+.functioning {
   display: flex;
   flex-direction: column;
-  align-items: center; // Faire en sorte que le titre ne soit pas centré
+  align-items: center;
   height: 440px;
   justify-content: space-around;
+  position: relative;
+
+  &__article {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--light-grey);
+    border-radius: 20px;
+    width: 92.14%;
+    height: 72.38px;
+    position: relative;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: calc(50% - 10.5px);
+      left: 12.3%;
+    }
+
+  }
 
   :nth-child(2)::before,
   :nth-child(3)::before,
@@ -90,76 +121,27 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    // Réussir à les centrer horizontalement par rapport aux articles
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -12px;
   }
 
-  &__article {
-    font-weight: 500;
-    font-size: 16px;
-    background-color: var(--light-grey);
-    border-radius: 20px;
-    width: 92.14%;
-    height: 72.38px;
-
-    span {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  &__article:nth-of-type(1) {
-    span::before {
-      content: url('../../assets/images/icons/mobile-screen-button.svg');
-    }
-
-  }
-
-  &__article:nth-of-type(2) {
-    span::before {
-      content: url('../../assets/images/icons/list-ul.svg');
-    }
-
-  }
-
-  &__article:nth-of-type(3) {
-    span::before {
-      content: url('../../assets/images/icons/store.svg');
-    }
-
-  }
 }
 
+
+.restaurants {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  position: relative;
+  height: 1200px;
+}
 
 .footer {
   background-color: var(--dark-grey);
 }
-
-.section__restaurants {
-  width: 100vw;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  &__cards {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__card {
-    background-color: white;
-    border-radius: 10px;
-
-    img:first-child {
-      width: 100%;
-    }
-  }
-
-}
-
 
 
 
