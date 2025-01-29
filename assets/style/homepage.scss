@@ -1,0 +1,165 @@
+@use 'general.scss';
+
+* {
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 113px;
+
+  &__container {
+    &__location {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--medium-grey);
+      width: 100vw;
+      height: 50px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    &__logo {
+      display: flex;
+      height: 63px;
+    }
+  }
+}
+
+.section__explore, .section__restaurants {
+  background-color: var(--light-grey);
+}
+
+.section__explore {
+  width: 100vw; // Pourquoi à gauche il y a encore une marge ?
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: center;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__button {
+    background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    height: 16.6%;
+    width: auto;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  &__text {
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+
+
+.section__functioning {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Faire en sorte que le titre ne soit pas centré
+  height: 440px;
+  justify-content: space-around;
+
+  :nth-child(2)::before,
+  :nth-child(3)::before,
+  :nth-child(4)::before {
+    content: attr(data-content);
+    background-color: var(--primary-color);
+    font-weight: 500;
+    font-size: 14.18px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Réussir à les centrer horizontalement par rapport aux articles
+  }
+
+  &__article {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--light-grey);
+    border-radius: 20px;
+    width: 92.14%;
+    height: 72.38px;
+
+    span {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__article:nth-of-type(1) {
+    span::before {
+      content: url('../../assets/images/icons/mobile-screen-button.svg');
+    }
+
+  }
+
+  &__article:nth-of-type(2) {
+    span::before {
+      content: url('../../assets/images/icons/list-ul.svg');
+    }
+
+  }
+
+  &__article:nth-of-type(3) {
+    span::before {
+      content: url('../../assets/images/icons/store.svg');
+    }
+
+  }
+}
+
+
+.footer {
+  background-color: var(--dark-grey);
+}
+
+.section__restaurants {
+  width: 100vw;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 10px;
+
+    img:first-child {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+
