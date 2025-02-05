@@ -131,7 +131,6 @@
 
 .restaurants {
   width: 100vw;
-  height: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,8 +142,6 @@
     flex-direction: column;
     width: 90%;
     gap: 20px;
-    position: absolute;
-    top: 40%;
 
     a {
       color: black;
@@ -213,6 +210,41 @@
 
 .footer {
   background-color: var(--dark-grey);
+  height: 186px;
+  display: flex;
+  position: relative;
+
+  &__content {
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+
+    a {
+      color: white;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    a:nth-of-type(1), a:nth-of-type(2) {
+      font-weight: 500;
+    }
+
+    a:nth-of-type(3), a:nth-of-type(4) {
+      font-weight: 400;
+    }
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__logo {
+    height: 27px;
+    width: 139px;
+    filter: invert(1);
+  }
 }
 
 
