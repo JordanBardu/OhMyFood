@@ -15,24 +15,33 @@
       justify-content: center;
       background-color: var(--medium-grey);
       width: 100vw;
-      height: 50px;
       font-weight: 500;
       font-size: 16px;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      position: relative;
 
+      span {
+        margin-top: 15.5px;
+        margin-bottom: 15.5px;
+        padding-left: 26px;
+      }
 
-      img {
+      span::before {
+        content: url('../images/icons/pin.svg');
         position: absolute;
-        left: 28.8%;
+        top: calc(50% - 8px);
+        left: 32%;
       }
     }
 
-    &__logo {
-      display: flex;
-      justify-content: center;
-      height: 63px;
-      width: 100vw;
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    &__title {
+      color: black;
+      font-family: 'Shrikhand';
+      font-weight: 400;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
     }
   }
 }
@@ -42,15 +51,21 @@
 }
 
 .explore {
-  width: 100vw; // Pourquoi à gauche il y a encore une marge ?
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
-  justify-content: center;
+  text-align: center;
+  padding-bottom: 57px;
+
 
   &__title {
     font-weight: 700;
+    font-size: 24px;
+    word-wrap: break-word;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-top: 39px;
   }
 
   &__button {
@@ -58,17 +73,20 @@
     border: none;
     border-radius: 25px;
     color: white;
-    height: 16.6%;
+    height: 50px;
     width: auto;
     font-weight: 500;
     font-size: 16px;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 19px;
+    padding-right: 19px;
   }
 
   &__text {
-    text-align: center;
     word-wrap: break-word;
+    font-weight: 300;
+    font-size: 18px;
+    padding-bottom: 27px;
+    padding-top: 14px;
   }
 }
 
@@ -76,21 +94,26 @@
 .functioning {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 440px;
-  justify-content: space-around;
   position: relative;
+  width: 100vw;
+  padding-top: 48px;
+  padding-bottom: 68px;
+
+  &__title {
+    margin-left: 20px;
+  }
 
   &__article {
     font-weight: 500;
     font-size: 16px;
     background-color: var(--light-grey);
     border-radius: 20px;
-    width: 92.14%;
     height: 72.38px;
     position: relative;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-
+    margin-left: calc(20px + 12px);
+    margin-right: 20px;
+    margin-top: 25px;
 
     span {
       display: flex;
@@ -133,26 +156,32 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
+  padding-bottom: 66px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 54px;
+    padding-left: 20px;
+  }
 
   &__cards {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 90%;
-    gap: 20px;
 
     a {
       color: black;
     }
 
     &__card {
-      height: 251px;
       background-color: white;
-      border-bottom-right-radius: 15px;
-      border-bottom-left-radius: 15px;
+      border-radius: 15px;
       position: relative;
+      margin-top: 18px;
+      margin-left: 18px;
+      margin-right: 18px;
 
       &__new {
         background-color: var(--light-green);
@@ -163,8 +192,8 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 5%;
-        right: 5%;
+        right: 15px;
+        top: 15px;
 
         span {
           color: var(--dark-green);
@@ -180,28 +209,35 @@
       }
 
       &__content {
+        padding-bottom: 12px;
+        padding-top: 16px;
+        padding-left: 12px;
 
-        position: absolute;
-        top: 72%;
-        left: 3%;
-
-        span:first-child {
+        h3 {
           font-weight: 700;
           font-size: 18px;
-          line-height: 30px;
         }
 
-        span:nth-of-type(2) {
+        span {
           font-weight: 300;
           font-size: 17px;
         }
+
+        img {
+          position: absolute;
+          right: 7.35%;
+          bottom: 13.15%;
+        }
+
       }
 
-      &__img {
-        height: 66%;
+      img:first-child {
+        height: 166px;
         width: 100%;
-        border-top-right-radius: 15px;
+        object-fit: cover;
+        box-sizing: content-box;
         border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
       }
     }
   }
@@ -210,20 +246,42 @@
 
 .footer {
   background-color: var(--dark-grey);
-  height: 186px;
+  flex-direction: column;
+  width: 100vw;
   display: flex;
   position: relative;
 
+  &__title {
+    color: white;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-top: 22px;
+    margin-bottom: 16px;
+  }
+
   &__content {
-    flex-direction: column;
-    position: absolute;
-    top: 20%;
-    left: 5%;
+    padding-bottom: 22px;
+    padding-left: 25px;
 
     a {
       color: white;
       font-size: 16px;
-      line-height: 19px;
+
+      span {
+        margin-bottom: 7px;
+      }
+    }
+
+    a:nth-of-type(1)::before {
+      content: url('../images/icons/restaurant.svg');
+      margin-right: 11px;
+    }
+
+    a:nth-of-type(2)::before {
+      content: url('../images/icons/partnership.svg');
+      margin-right: 11px;
     }
 
     a:nth-of-type(1), a:nth-of-type(2) {
@@ -233,17 +291,6 @@
     a:nth-of-type(3), a:nth-of-type(4) {
       font-weight: 400;
     }
-
-    img {
-      height: 20px;
-      width: 20px;
-    }
-  }
-
-  &__logo {
-    height: 27px;
-    width: 139px;
-    filter: invert(1);
   }
 }
 
