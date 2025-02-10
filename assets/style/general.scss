@@ -29,3 +29,53 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
+
+.footer {
+  background-color: var(--dark-grey);
+  flex-direction: column;
+  width: 100vw;
+  display: flex;
+  position: relative;
+
+  &__title {
+    color: white;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-top: 22px;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    padding-bottom: 22px;
+    padding-left: 25px;
+
+    a {
+      color: white;
+      font-size: 16px;
+
+      span {
+        margin-bottom: 7px;
+      }
+    }
+
+    a:nth-of-type(1)::before {
+      content: url('../images/icons/restaurant.svg');
+      margin-right: 11px;
+    }
+
+    a:nth-of-type(2)::before {
+      content: url('../images/icons/partnership.svg');
+      margin-right: 11px;
+    }
+
+    a:nth-of-type(1), a:nth-of-type(2) {
+      font-weight: 500;
+    }
+
+    a:nth-of-type(3), a:nth-of-type(4) {
+      font-weight: 400;
+    }
+  }
+}

@@ -6,6 +6,8 @@
   --secondary-color: #FF79DA;
   --tertiary-color: #99E2D0;
   --dark-grey: #353535;
+  --light-green: #99E2D0;
+  --dark-green: #008766;
 }
 
 a {
@@ -20,6 +22,53 @@ a {
 body {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: var(--dark-grey);
+  flex-direction: column;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+.footer__title {
+  color: white;
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 25px;
+  padding-top: 22px;
+  margin-bottom: 16px;
+}
+.footer__content {
+  padding-bottom: 22px;
+  padding-left: 25px;
+}
+.footer__content a {
+  color: white;
+  font-size: 16px;
+}
+.footer__content a span {
+  margin-bottom: 7px;
+}
+.footer__content a:nth-of-type(1)::before {
+  content: url("../images/icons/restaurant.svg");
+  margin-right: 11px;
+}
+.footer__content a:nth-of-type(2)::before {
+  content: url("../images/icons/partnership.svg");
+  margin-right: 11px;
+}
+.footer__content a:nth-of-type(1), .footer__content a:nth-of-type(2) {
+  font-weight: 500;
+}
+.footer__content a:nth-of-type(3), .footer__content a:nth-of-type(4) {
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=general.css.map */

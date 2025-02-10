@@ -5,43 +5,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 113px;
   position: relative;
+  width: 100vw;
 
-  &__container {
-    &__location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--medium-grey);
-      width: 100vw;
-      font-weight: 500;
-      font-size: 16px;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-      position: relative;
+  &__title {
+    color: black;
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 30px;
+  }
 
-      span {
-        margin-top: 15.5px;
-        margin-bottom: 15.5px;
-        padding-left: 26px;
-      }
+  &__location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--medium-grey);
+    width: 100vw;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
 
-      span::before {
-        content: url('../images/icons/pin.svg');
-        position: absolute;
-        top: calc(50% - 8px);
-        left: 32%;
-      }
+    span {
+      margin-top: 15.5px;
+      margin-bottom: 15.5px;
+      padding-left: 26px;
     }
 
-    &__title {
-      color: black;
-      font-family: 'Shrikhand';
-      font-weight: 400;
-      font-size: 30px;
-      text-align: center;
-      padding-top: 14px;
-      padding-bottom: 14px;
+    span::before {
+      content: url('../images/icons/pin.svg');
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 32%;
     }
   }
 }
@@ -244,55 +239,7 @@
 
 }
 
-.footer {
-  background-color: var(--dark-grey);
-  flex-direction: column;
-  width: 100vw;
-  display: flex;
-  position: relative;
 
-  &__title {
-    color: white;
-    font-family: 'Shrikhand';
-    font-weight: 400;
-    font-size: 18px;
-    padding-left: 25px;
-    padding-top: 22px;
-    margin-bottom: 16px;
-  }
-
-  &__content {
-    padding-bottom: 22px;
-    padding-left: 25px;
-
-    a {
-      color: white;
-      font-size: 16px;
-
-      span {
-        margin-bottom: 7px;
-      }
-    }
-
-    a:nth-of-type(1)::before {
-      content: url('../images/icons/restaurant.svg');
-      margin-right: 11px;
-    }
-
-    a:nth-of-type(2)::before {
-      content: url('../images/icons/partnership.svg');
-      margin-right: 11px;
-    }
-
-    a:nth-of-type(1), a:nth-of-type(2) {
-      font-weight: 500;
-    }
-
-    a:nth-of-type(3), a:nth-of-type(4) {
-      font-weight: 400;
-    }
-  }
-}
 
 
 
