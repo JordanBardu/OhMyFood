@@ -85,11 +85,13 @@ ul {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 30px;
+  padding-bottom: 5px;
+  padding-top: 14px;
 }
 .header__goback {
   position: absolute;
   left: 20px;
-  bottom: 7px;
+  bottom: 16px;
 }
 
 .background {
@@ -127,10 +129,18 @@ ul {
   margin-bottom: 12px;
   padding: 13.5px 13.5px 13.5px 15px;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 .menu__content__item__title {
+  display: inline-block;
+  width: 100%;
   font-weight: 500;
   font-size: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: padding-right 0.2s ease;
 }
 .menu__content__item__description {
   display: flex;
@@ -139,10 +149,40 @@ ul {
 .menu__content__item__description span:nth-child(1) {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: padding-right 0.2s ease;
 }
 .menu__content__item__description span:nth-child(2) {
   font-weight: 700;
   font-size: 15px;
+  transition: padding-right 0.2s ease;
+}
+.menu__content__item__check {
+  width: 59px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgb(153, 226, 208);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(59px);
+  transition: transform 0.2s ease;
+}
+.menu__content__item:hover .menu__content__item__check {
+  transform: translateX(0px);
+}
+.menu__content__item:hover .menu__content__item__title {
+  padding-right: 35%;
+}
+.menu__content__item:hover .menu__content__item__description span:nth-child(2) {
+  padding-right: 72.5px;
+}
+.menu__content__item:hover .menu__content__item__description span:nth-child(1) {
+  padding-right: 13.5px;
 }
 .menu__content h2 {
   font-weight: 300;
