@@ -29,12 +29,17 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .footer {
   background-color: var(--dark-grey);
+  display: flex;
   flex-direction: column;
   width: 100vw;
-  display: flex;
-  position: relative;
 }
 .footer__title {
   color: white;
@@ -51,23 +56,22 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .footer__content a {
   color: white;
+  display: block;
   font-size: 16px;
-}
-.footer__content a span {
   margin-bottom: 7px;
 }
-.footer__content a:nth-of-type(1)::before {
+.footer__content li:nth-of-type(1) a::before {
   content: url("../images/icons/restaurant.svg");
   margin-right: 11px;
 }
-.footer__content a:nth-of-type(2)::before {
+.footer__content li:nth-of-type(2) a::before {
   content: url("../images/icons/partnership.svg");
   margin-right: 11px;
 }
-.footer__content a:nth-of-type(1), .footer__content a:nth-of-type(2) {
+.footer__content li:nth-of-type(1), .footer__content li:nth-of-type(2) {
   font-weight: 500;
 }
-.footer__content a:nth-of-type(3), .footer__content a:nth-of-type(4) {
+.footer__content li:nth-of-type(3), .footer__content li:nth-of-type(4) {
   font-weight: 400;
 }
 
@@ -131,13 +135,15 @@ h1, h2, h3, h4, h5, h6, p {
   background: linear-gradient(180deg, var(--secondary-color), var(--primary-color));
   border: none;
   border-radius: 25px;
-  color: white;
   height: 50px;
   width: auto;
   font-weight: 500;
   font-size: 16px;
   padding-left: 19px;
   padding-right: 19px;
+}
+.explore__button a {
+  color: white;
 }
 .explore__text {
   word-wrap: break-word;
