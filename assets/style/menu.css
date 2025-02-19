@@ -123,16 +123,28 @@ button:hover {
   background-color: var(--light-grey);
   margin-top: -56px;
 }
-.menu__title {
+.menu__header__title {
   font-weight: 400;
   font-family: "Shrikhand";
   font-size: 28px;
-  padding-left: 17px;
   padding-top: 32px;
+  padding-left: 17px;
 }
-.menu__title::after {
-  content: url("../images/icons/heart.png");
-  margin-left: 40px;
+.menu__header__like {
+  position: absolute;
+  left: 312px;
+  top: 42px;
+}
+.menu__header__likeactive {
+  position: absolute;
+  left: 312px;
+  top: 42px;
+  opacity: 0;
+}
+.menu__header__likeactive:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
 .menu__content {
@@ -150,6 +162,9 @@ button:hover {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  transform: translateX(110%);
+  animation: slideFromRight 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--item-index));
 }
 .menu__content__item__title {
   display: inline-block;
@@ -224,6 +239,15 @@ button:hover {
   height: 50px;
   width: 50%;
   font-weight: 500;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 /*# sourceMappingURL=menu.css.map */
