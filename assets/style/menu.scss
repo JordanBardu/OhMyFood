@@ -27,9 +27,11 @@
 }
 
 .menu {
+  position: relative;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   background-color: var(--light-grey);
+  margin-top: -56px;
 
   &__title {
     font-weight: 400;
@@ -150,9 +152,4 @@
     width: 50%;
     font-weight: 500;
   }
-}
-
-body > div {
-  position: absolute;
-  top: 17%;
 }
