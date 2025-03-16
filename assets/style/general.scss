@@ -59,7 +59,7 @@ button:hover {
   flex-direction: column;
   width: 100vw;
 
-  &__title {
+  &__title { // Logo du footer
     color: white;
     font-family: 'Shrikhand';
     font-weight: 400;
@@ -69,7 +69,7 @@ button:hover {
     margin-bottom: 16px;
   }
 
-  &__content {
+  &__content { // Liste des boutons du footer
     padding-bottom: 22px;
     padding-left: 25px;
     display: flex;

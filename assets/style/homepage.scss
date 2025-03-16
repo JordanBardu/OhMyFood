@@ -8,7 +8,7 @@
   position: relative;
   width: 100vw;
 
-  &__title {
+  &__title { // Le logo OhMyFood
     color: black;
     font-family: 'Shrikhand';
     font-weight: 400;
@@ -17,7 +17,7 @@
     padding-top: 1%;
   }
 
-  &__location {
+  &__location { // Le bandeau de localisation
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,13 +28,13 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
 
-    span {
+    span { // Le texte "Paris, Belleville"
       margin-top: 15.5px;
       margin-bottom: 15.5px;
       padding-left: 26px;
     }
 
-    span::before {
+    span::before { // L'icône de localisation
       content: url('../images/icons/pin.svg');
       position: absolute;
       top: calc(50% - 8px);
@@ -47,7 +47,7 @@
   background-color: var(--light-grey);
 }
 
-.explore {
+.explore { // Première section du site
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -65,10 +65,10 @@
     padding-top: 39px;
   }
 
-  a {
+  a { // Le lien de redirection vers l'ancre Restaurants de la page
     padding-bottom: 50px;
 
-    button {
+    button { // Le bouton "Explorer nos restaurants"
       color: white;
       height: 50px;
       width: auto;
@@ -109,7 +109,7 @@
       text-align: left;
     }
 
-    &__articles {
+    &__articles { // Le conteneur de mes trois étapes
       display: grid;
       grid-template-columns: 1fr;
 
@@ -123,14 +123,14 @@
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         margin-top: 25px;
 
-        span {
+        span { // Le texte de l'étape
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100%;
         }
 
-        img {
+        img { // L'icône de l'étape
           position: absolute;
           top: calc(50% - 10.5px);
           left: 12.3%;
@@ -143,7 +143,7 @@
 
   :nth-child(2)::before,
   :nth-child(3)::before,
-  :nth-child(4)::before {
+  :nth-child(4)::before { // Les numéros à gauche de chaque étape
     content: attr(data-content);
     background-color: var(--primary-color);
     font-weight: 500;
@@ -199,7 +199,7 @@
         margin-left: 18px;
         margin-right: 18px;
 
-        &__new {
+        &__new { // Le bandeau "Nouveau" sur les cards de restaurants
           background-color: var(--light-green);
           height: 29px;
           width: 80px;
@@ -219,28 +219,28 @@
         }
 
 
-        &__content {
+        &__content { // le contenu de la card, nom du restaurant, lieu et le bouton favori
           padding-bottom: 12px;
           padding-top: 16px;
           padding-left: 12px;
 
-          h3 {
+          h3 { // Le nom du restaurant
             font-weight: 700;
             font-size: 18px;
           }
 
-          span {
+          span { // Le lieu du restaurant
             font-weight: 300;
             font-size: 17px;
           }
 
-          img:nth-of-type(1) {
+          img:nth-of-type(1) { // Le bouton like inactif
             position: absolute;
             right: 7.35%;
             bottom: 13.15%;
           }
 
-          img:nth-of-type(2) {
+          img:nth-of-type(2) { // Le bouton like actif
             opacity: 0;
             transition: opacity 0.4s ease;
             position: absolute;
@@ -254,7 +254,7 @@
           }
         }
 
-        img:first-child {
+        img:first-child { // L'image du restaurant
           height: 166px;
           width: 100%;
           object-fit: cover;
@@ -269,7 +269,7 @@
 
 }
 
-.loader {
+.loader { // Loader fictif
   height: 100%;
   width: 100vw;
   background-color: white;
@@ -280,16 +280,16 @@
   position: fixed;
   z-index: 2;
   overflow: hidden;
-  animation: endLoader 0s ease forwards;
+  animation: endLoader 4.5s ease forwards;
 
-  &__text {
+  &__text { // Le logo OhMyFood
     span:nth-of-type(1), span:nth-of-type(2) {
       font-family: 'Shrikhand';
       font-weight: 400;
       font-size: 35px;
     }
 
-    &__o {
+    &__o { // La lettre o isolée pour l'animation
       display: inline-block;
       animation-name: slide;
       animation-iteration-count: infinite;
@@ -297,14 +297,14 @@
       animation-timing-function: ease;
     }
 
-    &__hmyfood {
+    &__hmyfood { // Le reste du texte
       opacity: 1;
       clip-path: inset(0 0 0 0);
       animation: maskText 3s infinite ease;
     }
   }
 
-  &__circle {
+  &__circle { // Le cercle principal, celui qui se colore
     position: relative;
     top: 3%;
     height: 56px;
@@ -316,7 +316,7 @@
     justify-content: center;
     animation: fillCircle 4s linear 1;
 
-    &__inner {
+    &__inner { // Le cercle blanc au milieu pour cacher le centre du rond parent
       background-color: white;
       height: 50px;
       width: 49px;

@@ -1,4 +1,4 @@
-@keyframes fillCircle {
+@keyframes fillCircle { // L'animation qui fait remplit le rond
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
   }
@@ -17,7 +17,7 @@
 }
 
 
-@keyframes slide {
+@keyframes slide { // L'animation du o du loader
   0% {
     transform: translateX(0) rotate(0);
   }
@@ -31,7 +31,7 @@
   }
 }
 
-@keyframes maskText {
+@keyframes maskText { // L'animation du texte du loader qui s'efface au fur et à mesure
   0% {
     clip-path: inset(0 0 0 0);
     opacity: 1;
@@ -46,7 +46,7 @@
   }
 }
 
-@keyframes endLoader {
+@keyframes endLoader { // L'animation qui fait disparaître le loader fictif
   0% {
     opacity: 1;
   }
@@ -59,7 +59,7 @@
   }
 }
 
-@keyframes slideFromRight {
+@keyframes slideFromRight { // L'animation des éléments de la page menu qui apparaissent
   from {
     transform: translateX(100%);
   }
