@@ -70,10 +70,11 @@ button:hover {
 .footer__content {
   padding-bottom: 22px;
   padding-left: 25px;
+  display: flex;
+  flex-direction: column;
 }
 .footer__content a {
   color: white;
-  display: block;
   font-size: 16px;
   margin-bottom: 7px;
 }
@@ -92,6 +93,85 @@ button:hover {
   font-weight: 400;
 }
 
+@media (min-width: 1440px) {
+  .footer {
+    flex-direction: row;
+    flex-direction: row-reverse;
+  }
+  .footer__title {
+    padding-top: 30px;
+    padding-right: 30px;
+  }
+  .footer__content {
+    flex-direction: row;
+    padding-top: 30px;
+  }
+  .footer__content li {
+    margin-right: 20px;
+  }
+}
+@keyframes fillCircle {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(780%) rotate(360deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes maskText {
+  0% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+  50% {
+    clip-path: inset(0 0 0 105%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+@keyframes endLoader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -113,7 +193,7 @@ button:hover {
 
 .background {
   height: 275px;
-  width: 375px;
+  width: 100vw;
 }
 
 .menu {
@@ -122,6 +202,12 @@ button:hover {
   border-top-left-radius: 15px;
   background-color: var(--light-grey);
   margin-top: -56px;
+  max-width: 70%;
+}
+.menu__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu__header__title {
   font-weight: 400;
@@ -130,15 +216,7 @@ button:hover {
   padding-top: 32px;
   padding-left: 17px;
 }
-.menu__header__like {
-  position: absolute;
-  left: 312px;
-  top: 42px;
-}
 .menu__header__likeactive {
-  position: absolute;
-  left: 312px;
-  top: 42px;
   opacity: 0;
 }
 .menu__header__likeactive:hover {
@@ -241,12 +319,20 @@ button:hover {
   font-weight: 500;
 }
 
-@keyframes slideFromRight {
-  from {
-    transform: translateX(100%);
+@media (min-width: 1440px) {
+  .menu {
+    margin-left: 11%;
+    margin-right: 11%;
   }
-  to {
-    transform: translateX(0);
+  .menu__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu__content {
+    width: auto;
+    padding-left: 20%;
+    padding-right: 20%;
   }
 }
 

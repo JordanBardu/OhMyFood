@@ -72,10 +72,11 @@ button:hover {
   &__content {
     padding-bottom: 22px;
     padding-left: 25px;
+    display: flex;
+    flex-direction: column;
 
     a {
       color: white;
-      display: block;
       font-size: 16px;
       margin-bottom: 7px;
     }
@@ -101,6 +102,27 @@ button:hover {
 
     li:nth-of-type(3), li:nth-of-type(4) {
       font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    flex-direction: row;
+    flex-direction: row-reverse;
+
+    &__title {
+      padding-top: 30px;
+      padding-right: 30px;
+    }
+
+    &__content {
+      flex-direction: row;
+      padding-top: 30px;
+
+      li {
+        margin-right: 20px;
+      }
     }
   }
 }

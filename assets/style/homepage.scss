@@ -1,5 +1,5 @@
 @use 'general.scss';
-
+@use 'animations.scss';
 
 .header {
   display: flex;
@@ -13,6 +13,8 @@
     font-family: 'Shrikhand';
     font-weight: 400;
     font-size: 30px;
+    padding-bottom: 1%;
+    padding-top: 1%;
   }
 
   &__location {
@@ -51,27 +53,29 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 57px;
+  padding-bottom: 2%;
 
 
   &__title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.8em;
     word-wrap: break-word;
     padding-left: 42px;
     padding-right: 42px;
     padding-top: 39px;
   }
 
-  &__button {
-    height: 50px;
-    width: auto;
-    padding-left: 19px;
-    padding-right: 19px;
+  a {
+    padding-bottom: 50px;
 
-    a {
+    button {
       color: white;
+      height: 50px;
+      width: auto;
+      padding-left: 19px;
+      padding-right: 19px;
     }
+
   }
 
   &__text {
@@ -87,39 +91,53 @@
 .functioning {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100vw;
   padding-top: 48px;
   padding-bottom: 68px;
 
-  &__title {
-    margin-left: 20px;
-  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
 
-  &__article {
-    font-weight: 500;
-    font-size: 16px;
-    background-color: var(--light-grey);
-    border-radius: 20px;
-    height: 72.38px;
-    position: relative;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    margin-left: calc(20px + 12px);
-    margin-right: 20px;
-    margin-top: 25px;
-
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+    &__title {
+      grid-column: 1 / -1;
+      margin: 0;
+      text-align: left;
     }
 
-    img {
-      position: absolute;
-      top: calc(50% - 10.5px);
-      left: 12.3%;
+    &__articles {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      &__item {
+        font-weight: 500;
+        font-size: 16px;
+        background-color: var(--light-grey);
+        border-radius: 20px;
+        height: 72.38px;
+        position: relative;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        margin-top: 25px;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+
+        img {
+          position: absolute;
+          top: calc(50% - 10.5px);
+          left: 12.3%;
+        }
+      }
     }
+
 
   }
 
@@ -147,99 +165,107 @@
 
 .restaurants {
   width: 100vw;
-  display: flex;
-  flex-direction: column;
   position: relative;
   padding-bottom: 66px;
+  padding-top: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &__title {
-    font-size: 24px;
-    font-weight: 700;
-    padding-top: 54px;
-    padding-left: 20px;
-  }
+  &__container {
+    width: 95%;
 
-  &__cards {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    a {
-      color: black;
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 20px;
+      padding-bottom: 10px;
     }
 
-    &__card {
-      background-color: white;
-      border-radius: 15px;
-      position: relative;
-      margin-top: 18px;
-      margin-left: 18px;
-      margin-right: 18px;
+    &__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 50px;
+      row-gap: 25px;
 
-      &__new {
-        background-color: var(--light-green);
-        height: 29px;
-        width: 80px;
-        border-radius: 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-
-        span {
-          color: var(--dark-green);
-          font-weight: 500;
-          font-size: 14px;
-        }
+      a {
+        color: black;
       }
 
+      &__item {
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+        margin-left: 18px;
+        margin-right: 18px;
 
-      &__content {
-        padding-bottom: 12px;
-        padding-top: 16px;
-        padding-left: 12px;
-
-        h3 {
-          font-weight: 700;
-          font-size: 18px;
-        }
-
-        span {
-          font-weight: 300;
-          font-size: 17px;
-        }
-
-        img:nth-of-type(1) {
+        &__new {
+          background-color: var(--light-green);
+          height: 29px;
+          width: 80px;
+          border-radius: 2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: absolute;
-          right: 7.35%;
-          bottom: 13.15%;
+          right: 15px;
+          top: 15px;
+
+          span {
+            color: var(--dark-green);
+            font-weight: 500;
+            font-size: 14px;
+          }
         }
 
-        img:nth-of-type(2) {
-          opacity: 0;
-          position: absolute;
-          right: 7.35%;
-          bottom: 13.15%;
+
+        &__content {
+          padding-bottom: 12px;
+          padding-top: 16px;
+          padding-left: 12px;
+
+          h3 {
+            font-weight: 700;
+            font-size: 18px;
+          }
+
+          span {
+            font-weight: 300;
+            font-size: 17px;
+          }
+
+          img:nth-of-type(1) {
+            position: absolute;
+            right: 7.35%;
+            bottom: 13.15%;
+          }
+
+          img:nth-of-type(2) {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            position: absolute;
+            right: 7.35%;
+            bottom: 13.15%;
+          }
+
+          img:nth-of-type(2):hover {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+          }
         }
 
-        img:nth-of-type(2):hover {
-          opacity: 1;
-          transition: opacity 0.4s ease;
+        img:first-child {
+          height: 166px;
+          width: 100%;
+          object-fit: cover;
+          box-sizing: content-box;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
         }
-      }
-
-      img:first-child {
-        height: 166px;
-        width: 100%;
-        object-fit: cover;
-        box-sizing: content-box;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
       }
     }
   }
+
 
 }
 
@@ -254,7 +280,7 @@
   position: fixed;
   z-index: 2;
   overflow: hidden;
-  animation: endLoader 4.5s ease forwards;
+  animation: endLoader 0s ease forwards;
 
   &__text {
     span:nth-of-type(1), span:nth-of-type(2) {
@@ -301,65 +327,57 @@
 
 }
 
+@media (min-width: 1440px) {
 
-@keyframes fillCircle {
-  0% {
-    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
-  }
-  25% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
-  }
-  50% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
-  }
-  75% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
-  }
-  100% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
-  }
-}
-
-
-@keyframes slide {
-  0% {
-    transform: translateX(0) rotate(0);
+  .explore {
+    &__title {
+      font-size: 2.8em;
+    }
   }
 
-  50% {
-    transform: translateX(780%) rotate(360deg);
+  .functioning {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+
+      &__title {
+        grid-column: 1 / -1;
+        margin: 0;
+        text-align: left;
+      }
+
+      &__articles {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
   }
 
-  100% {
-    transform: translateX(0);
+  .header {
+    &__location {
+      span::before {
+        content: url('../images/icons/pin.svg');
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 45%;
+      }
+    }
   }
-}
 
-@keyframes maskText {
-  0% {
-    clip-path: inset(0 0 0 0);
-    opacity: 1;
-  }
-  50% {
-    clip-path: inset(0 0 0 105%);
-    opacity: 0;
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-    opacity: 1;
-  }
-}
+  .restaurants {
+    &__container {
+      width: 73%;
 
-@keyframes endLoader {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
+      &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+      }
+    }
+
   }
 }
 
