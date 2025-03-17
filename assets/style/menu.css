@@ -222,6 +222,7 @@ button:hover {
 }
 .menu__header__likeactive {
   padding-top: 32px;
+  margin-left: -22px;
   opacity: 0;
 }
 .menu__header__likeactive:hover {
